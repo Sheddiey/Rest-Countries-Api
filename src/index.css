@@ -16,3 +16,9 @@
     background-color: hsl(205, 26%, 17%);
     color: white;
   }
+
+  @media (min-width: 992px) {
+    body {
+      padding: 50px 100px;
+    }
+  }
