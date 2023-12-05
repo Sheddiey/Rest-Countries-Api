@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./countries.css";
 
 const url = "https://restcountries.com/v3.1/all";
 
@@ -25,16 +26,18 @@ const Countries = () => {
             <article key={cca3}>
               <div>
                 <img src={flags.svg} alt={name.common} />
-                <h3>{name.common}</h3>
-                <h4>
-                  Population: <span>{population}</span>
-                </h4>
-                <h4>
-                  Region: <span>{region}</span>
-                </h4>
-                <h4>
-                  Capital: <span>{capital}</span>
-                </h4>
+                <div className="details">
+                  <h3>{name.common}</h3>
+                  <h4>
+                    Population: <span>{population}</span>
+                  </h4>
+                  <h4>
+                    Region: <span>{region}</span>
+                  </h4>
+                  <h4>
+                    Capital: <span>{capital}</span>
+                  </h4>
+                </div>
               </div>
             </article>
           );
