@@ -2,4 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: hsl(210, 22%, 22%);
+    padding: 10px 20px;
+}
+@media (min-width: 992px) {
+    .header {
+        padding: 20px 100px;
+    }
 }

@@ -12,13 +12,13 @@
 
   body {
     font-family: 'Nunito Sans', sans-serif;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: hsl(205, 26%, 17%);
     color: white;
   }
 
-  @media (min-width: 992px) {
-    body {
-      padding: 50px 100px;
+  /* @media (min-width: 992px) {
+    .header, .filter, .grid {
+      padding: 20px 100px;
     }
-  }
+  } */

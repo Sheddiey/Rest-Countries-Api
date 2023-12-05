@@ -1,5 +1,5 @@
 import React from "react";
-import Countries from "./Components/CountriesComponent/Countries";
+import Countries from "./Components/Countries/Countries";
 import Header from "./Components/Header/Header";
 import Filter from "./Components/Filter/Filter";
 

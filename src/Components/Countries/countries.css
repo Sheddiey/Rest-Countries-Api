@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 20px;
 }
 
 .grid article img {
@@ -41,5 +42,6 @@
     .grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 60px;
+        padding: 20px 100px;
     }
 }
