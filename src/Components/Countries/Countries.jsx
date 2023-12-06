@@ -23,9 +23,9 @@ const Countries = () => {
           return (
             <article key={numericCode}>
               <div>
-                <img src={flags.svg} alt={name.common} />
+                <img src={flags.svg} alt={name} />
                 <div className="details">
-                  <h3>{name.common}</h3>
+                  <h3>{name}</h3>
                   <h4>
                     Population: <span>{population}</span>
                   </h4>
