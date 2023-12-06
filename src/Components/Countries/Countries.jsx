@@ -1,29 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./countries.css";
-
-const url = "https://restcountries.com/v3.1/all";
+import { Link } from "react-router-dom";
+import data from "../Assets/data.json";
 
 const Countries = () => {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState(data);
 
-  const fetchCountryData = async () => {
-    const response = await fetch(url);
-    const countries = await response.json();
-    setCountries(countries);
+  const removeCountry = (numericCode) => {
+    const newCountries = countries.filter(
+      (country) => country.numericCode !== numericCode
+    );
+    setCountries(newCountries);
   };
-
-  useEffect(() => {
-    fetchCountryData();
-  }, []);
 
   return (
     <>
       <section className="grid">
         {countries.map((country) => {
-          const { cca3, flags, name, population, region, capital } = country;
+          const { numericCode, flags, name, population, region, capital } =
+            country;
 
           return (
-            <article key={cca3}>
+            <article key={numericCode}>
               <div>
                 <img src={flags.svg} alt={name.common} />
                 <div className="details">
@@ -37,6 +35,17 @@ const Countries = () => {
                   <h4>
                     Capital: <span>{capital}</span>
                   </h4>
+                  <div className="buttons">
+                    <Link className="btn" to={`/countries/${numericCode}`}>
+                      Learn more
+                    </Link>
+                    <button
+                      className="btn"
+                      onClick={() => removeCountry(numericCode)}
+                    >
+                      Remove Country
+                    </button>
+                  </div>
                 </div>
               </div>
             </article>
