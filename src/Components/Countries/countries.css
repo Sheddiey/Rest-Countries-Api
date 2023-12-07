@@ -14,8 +14,12 @@
     padding: 20px;
     margin-top: -10px;
     border-radius: 0 0 5px 5px;
+    transition: background-color 0.4s;
 }
 
+.light-theme-countries{
+    background-color: hsl(0, 0%, 98%) !important;
+}
 .grid .details h3 {
     padding-bottom: 10px;
 }

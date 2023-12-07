@@ -3,7 +3,7 @@ import "./countries.css";
 import { Link } from "react-router-dom";
 import data from "../Assets/data.json";
 
-const Countries = () => {
+const Countries = ({countriesClasses}) => {
   const [countries, setCountries] = useState(data);
 
   const removeCountry = (numericCode) => {
@@ -24,7 +24,7 @@ const Countries = () => {
             <article key={numericCode}>
               <div>
                 <img src={flags.svg} alt={name} />
-                <div className="details">
+                <div className={countriesClasses}>
                   <h3>{name}</h3>
                   <h4>
                     Population: <span>{population}</span>

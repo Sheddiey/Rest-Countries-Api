@@ -4,6 +4,7 @@
     align-items: center;
     background-color: hsl(210, 22%, 22%);
     padding: 10px 20px;
+    transition: background-color 0.4s;
 }
 @media (min-width: 992px) {
     .header {

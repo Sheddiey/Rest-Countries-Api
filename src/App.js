@@ -9,12 +9,9 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const headerClasses = `header ${isDarkMode ? "light-theme" : ""}`;
-  const inputClasses = `form-control ${
-    isDarkMode ? "light-theme-input" : ""
-  }`;
-  const selectClasses = `select ${
-    isDarkMode ? "light-theme-input" : ""
-  }`;
+  const inputClasses = `form-control ${isDarkMode ? "light-theme-input" : ""}`;
+  const selectClasses = `select ${isDarkMode ? "light-theme-input" : ""}`;
+  const countriesClasses = `details ${isDarkMode ? 'light-theme-countries' : ''}`;
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -30,8 +27,11 @@ const App = () => {
           path="/"
           element={
             <>
-              <Filter inputClasses={inputClasses} selectClasses={selectClasses} />
-              <Countries />
+              <Filter
+                inputClasses={inputClasses}
+                selectClasses={selectClasses}
+              />
+              <Countries countriesClasses={countriesClasses} />
             </>
           }
         />
