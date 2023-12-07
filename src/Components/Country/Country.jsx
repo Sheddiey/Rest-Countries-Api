@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../Assets/data.json";
 import "./country.css";
-import { Li } from "react-flags-select";
 
 const Country = () => {
   const [country, setCountry] = useState({});
@@ -24,7 +23,6 @@ const Country = () => {
 
   const {
     numericCode: countryNumericCode,
-    flags,
     name,
     nativeName,
     population,

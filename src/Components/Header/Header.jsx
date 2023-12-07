@@ -1,9 +1,16 @@
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import './header.css'
+import React, { useState } from "react";
+import "./header.css";
 
 const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("light-theme");
+  };
+
   return (
     <>
       <header className="header">
@@ -11,7 +18,12 @@ const Header = () => {
           <h1>Where in the world?</h1>
         </div>
         <div>
-          <FontAwesomeIcon icon={faMoon} /> Dark Mode
+          <FontAwesomeIcon
+            className="moon-icon"
+            icon={faMoon}
+            onClick={toggleDarkMode}
+          />{" "}
+          Dark Mode
         </div>
       </header>
     </>
