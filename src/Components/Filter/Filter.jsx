@@ -1,10 +1,10 @@
 import React from "react";
 import "./filter.css";
 
-const Filter = () => {
+const Filter = ({inputClasses, selectClasses}) => {
   return (
-    <section className="filter">
-      <form action="" className="form-control">
+    <section className='filter'>
+      <form action="" className={inputClasses}>
         <input
           type="search"
           name="search"
@@ -13,7 +13,7 @@ const Filter = () => {
         />
       </form>
       <div className="region-filter">
-        <select name="select" id="select" className="select">
+        <select name="select" id="select" className={selectClasses}>
           <option value="Filter by region">Filter by region</option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>

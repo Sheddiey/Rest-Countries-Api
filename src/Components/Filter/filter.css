@@ -28,6 +28,10 @@
 .filter .region-filter {
     width: 100%;
 }
+.light-theme-input,
+.light-theme-input input {
+    background-color: var(--light-mode-input) !important;
+  }
 
 .filter .region-filter .select {
     background-color: hsl(210, 22%, 22%);

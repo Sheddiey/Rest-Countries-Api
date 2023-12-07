@@ -13,3 +13,8 @@
 .moon-icon {
     cursor: pointer;
 }
+ .light-theme{
+    background-color: var(--light-mode-background);
+    color: var(--light-mode-text);
+    box-shadow: 0 1px 10px  #d9d6d6;
+}
