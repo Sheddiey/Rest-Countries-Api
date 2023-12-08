@@ -6,6 +6,8 @@ const Filter = ({
   selectClasses,
   handleInputChange,
   searchValue,
+  handleRegionChange,
+  selectedRegion,
 }) => {
   return (
     <section className="filter">
@@ -20,8 +22,14 @@ const Filter = ({
         />
       </form>
       <div className="region-filter">
-        <select name="select" id="select" className={selectClasses}>
-          <option value="Filter by region">Filter by region</option>
+        <select
+          name="select"
+          id="select"
+          className={selectClasses}
+          value={selectedRegion}
+          onChange={handleRegionChange}
+        >
+          <option value="">Filter by region</option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>

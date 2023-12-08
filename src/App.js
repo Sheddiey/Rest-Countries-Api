@@ -11,9 +11,14 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [countries, setCountries] = useState(data);
 
-  const { filterData, searchValue, handleInputChange } = useSearch();
+  const {
+    filterData,
+    searchValue,
+    handleInputChange,
+    handleRegionChange,
+    selectedRegion,
+  } = useSearch();
   const filteredCountries = filterData(countries);
-
 
   const removeCountry = (numericCode) => {
     const newCountries = countries.filter(
@@ -49,6 +54,8 @@ const App = () => {
                 selectClasses={selectClasses}
                 searchValue={searchValue}
                 handleInputChange={handleInputChange}
+                handleRegionChange={handleRegionChange}
+                selectedRegion={selectedRegion}
               />
               <Countries
                 countriesClasses={countriesClasses}
