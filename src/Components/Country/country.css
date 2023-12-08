@@ -39,6 +39,10 @@
     padding: 3px 15px;
     border-radius: 3px;
     box-shadow: 0 5px 20px hsla(200, 15%, 8%, 0.3);
+    transition: background-color 0.4s;
+}
+.light-theme-country li{
+    background-color: var(--light-mode-background) !important;
 }
 
 @media (min-width: 992px ){

@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import data from "../Assets/data.json";
 import "./country.css";
 
-const Country = () => {
+const Country = ({countryClasses}) => {
   const [country, setCountry] = useState({});
   const { numericCode } = useParams();
 
@@ -92,7 +92,7 @@ const Country = () => {
 
           <div>
               <h3>Border Countries:</h3>
-              <div className="borders">
+              <div className={countryClasses}>
                 <ul>
                   {borders && borders.length > 0 ? (
                     borders.map((border) => <li key={border}>{border}</li>)

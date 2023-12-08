@@ -1,22 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./countries.css";
 import { Link } from "react-router-dom";
-import data from "../Assets/data.json";
 
-const Countries = ({countriesClasses}) => {
-  const [countries, setCountries] = useState(data);
+const Countries = ({ countriesClasses, filteredCountries, removeCountry }) => {
+  
 
-  const removeCountry = (numericCode) => {
-    const newCountries = countries.filter(
-      (country) => country.numericCode !== numericCode
-    );
-    setCountries(newCountries);
-  };
 
   return (
     <>
       <section className="grid">
-        {countries.map((country) => {
+        {filteredCountries.map((country) => {
           const { numericCode, flags, name, population, region, capital } =
             country;
 
@@ -25,7 +18,7 @@ const Countries = ({countriesClasses}) => {
               <div>
                 <img src={flags.svg} alt={name} />
                 <div className={countriesClasses}>
-                  <h3>{name}</h3>
+                  <h3 className="country-name">{name}</h3>
                   <h4>
                     Population: <span>{population}</span>
                   </h4>
