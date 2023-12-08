@@ -3,9 +3,6 @@ import "./countries.css";
 import { Link } from "react-router-dom";
 
 const Countries = ({ countriesClasses, filteredCountries, removeCountry }) => {
-  
-
-
   return (
     <>
       <section className="grid">
@@ -16,7 +13,10 @@ const Countries = ({ countriesClasses, filteredCountries, removeCountry }) => {
           return (
             <article key={numericCode}>
               <div>
-                <img src={flags.svg} alt={name} />
+                <div className="img-class">
+                  <img src={flags.svg} alt={name} />
+                </div>
+
                 <div className={countriesClasses}>
                   <h3 className="country-name">{name}</h3>
                   <h4>

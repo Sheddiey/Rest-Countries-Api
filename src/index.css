@@ -15,9 +15,7 @@
     box-sizing: border-box;
   }
 
-  img {
-    max-width: 100%;
-  }
+ 
 
   body {
     font-family: 'Nunito Sans', sans-serif;
@@ -27,7 +25,7 @@
   }
 
   .light-theme{
-    background-color: var(--light-mode-background);
+    background-color: hsl(0, 21%, 95%) !important;
     color: var(--light-mode-text);
   }
  

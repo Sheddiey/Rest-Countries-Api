@@ -1,9 +1,9 @@
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./header.css";
 
-const Header = ({headerClasses, toggleDarkMode}) => {
+const Header = ({headerClasses, toggleDarkMode, isDarkMode}) => {
  
 
   return (
@@ -15,10 +15,9 @@ const Header = ({headerClasses, toggleDarkMode}) => {
         <div>
           <FontAwesomeIcon
             className="moon-icon"
-            icon={faMoon}
+            icon={isDarkMode ? faMoon : faSun}
             onClick={toggleDarkMode}
-          />{" "}
-          Dark Mode
+          />
         </div>
       </header>
     </>

@@ -42,7 +42,11 @@ const App = () => {
 
   return (
     <Router>
-      <Header headerClasses={headerClasses} toggleDarkMode={toggleDarkMode} />
+      <Header
+        headerClasses={headerClasses}
+        isDarkMode={isDarkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
       <Routes>
         <Route
           exact

@@ -30,7 +30,7 @@
     width: 100%;
 }
 .light-theme-input,
-.light-theme-input input {
+.light-theme-input  {
     background-color: var(--light-mode-input) !important;
   }
 
@@ -62,6 +62,6 @@
 
 @media (min-width: 992px) {
     .filter {
-        padding: 20px 100px;
+        padding: 20px 30px;
     }
 }
